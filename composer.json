@@ -1,0 +1,19 @@
+{
+	"name": "Foreword/phpMorphy",
+	"type": "library",
+	"description": "Mirror of phpMorphy: http://phpmorphy.sourceforge.net/",
+	"homepage": "https://github.com/Foreword/phpMorphy",
+	"require": {
+	},
+	"require-dev": {
+	},
+	"scripts": {
+	},
+	"autoload": {
+		"psr-0": {
+			"Foreword\\phpMorphy": "psr-0"
+		}
+	}
+}
+
+
