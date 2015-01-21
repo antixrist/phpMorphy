@@ -1,4 +1,7 @@
 <?php
+
+namespace Foreword\phpMorphy;
+
 interface phpMorphy_GrammemsProvider_Interface {
     function getGrammems($partOfSpeech);
 }

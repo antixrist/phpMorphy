@@ -1,4 +1,7 @@
 <?php
+
+namespace Foreword\phpMorphy;
+
  /**
  * This file is part of phpMorphy library
  *
@@ -183,7 +186,7 @@ class phpMorphy_AnnotDecoder_Factory {
     }
     
     protected function instantinate($type) {
-        $clazz = 'phpMorphy_AnnotDecoder_' . ucfirst($GLOBALS['__phpmorphy_strtolower']($type));
+        $clazz = '\Foreword\phpMorphy\phpMorphy_AnnotDecoder_' . ucfirst($GLOBALS['__phpmorphy_strtolower']($type));
         
         return new $clazz($this->eos);
     }
@@ -846,7 +849,7 @@ class phpMorphy_Morphier_Helper {
 // WordDescriptor
 // ----------------------------
 // TODO: extend ArrayObject?
-class phpMorphy_WordDescriptor_Collection implements Countable, IteratorAggregate, ArrayAccess {
+class phpMorphy_WordDescriptor_Collection implements \Countable, \IteratorAggregate, \ArrayAccess {
     protected
         $word,
         $descriptors = array(),
@@ -961,7 +964,7 @@ class phpMorphy_WordForm {
     }
 }
 
-class phpMorphy_WordDescriptor implements Countable, ArrayAccess, IteratorAggregate {
+class phpMorphy_WordDescriptor implements \Countable, \ArrayAccess, \IteratorAggregate {
     protected
         $word,
         $annot,

@@ -1,4 +1,7 @@
 <?php
+
+namespace Foreword\phpMorphy;
+
 /**
  * This file is part of phpMorphy library
  *
@@ -97,7 +100,7 @@ abstract class phpMorphy_Fsa implements phpMorphy_Fsa_Interface {
         $root_trans,
         $alphabet;  
     
-    protected function phpMorphy_Fsa($resource, $header) {
+    protected function __construct($resource, $header) {
         $this->resource = $resource;
         $this->header = $header;
         $this->fsa_start = $header['fsa_offset'];
@@ -128,7 +131,7 @@ abstract class phpMorphy_Fsa implements phpMorphy_Fsa_Interface {
         
         $storage_type = $storage->getTypeAsString();
         $file_path = dirname(__FILE__) . "/access/fsa_{$type}_{$storage_type}.php";
-        $clazz = 'phpMorphy_Fsa_' . ucfirst($type) . '_' . ucfirst($storage_type);
+        $clazz = '\Foreword\phpMorphy\phpMorphy_Fsa_' . ucfirst($type) . '_' . ucfirst($storage_type);
         
         require_once($file_path);
         return new $clazz(
@@ -217,7 +220,7 @@ class phpMorphy_Fsa_WordsCollector {
         $items = array(),
         $limit;
     
-    function phpMorphy_Fsa_WordsCollector($collectLimit) {
+    function __construct($collectLimit) {
         $this->limit = $collectLimit;
     }
     
@@ -238,7 +241,7 @@ class phpMorphy_Fsa_WordsCollector {
 class phpMorphy_Fsa_Decorator implements phpMorphy_Fsa_Interface {
     protected $fsa;
     
-    function phpMorphy_Fsa_Decorator(phpMorphy_Fsa_Interface $fsa) {
+    function __construct(phpMorphy_Fsa_Interface $fsa) {
         $this->fsa = $fsa;
     }
     

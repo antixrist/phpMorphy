@@ -1,4 +1,7 @@
 <?php
+
+namespace Foreword\phpMorphy;
+
  /**
  * This file is part of phpMorphy library
  *
