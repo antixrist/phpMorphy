@@ -10,8 +10,8 @@
 	"scripts": {
 	},
 	"autoload": {
-		"psr-0": {
-			"Foreword\\phpMorphy": "psr-0"
+		"psr-4": {
+			"Foreword\\phpMorphy": "psr-4"
 		}
 	}
 }
