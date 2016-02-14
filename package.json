@@ -1,0 +1,22 @@
+{
+  "name": "php-morphy",
+  "version": "0.3.7",
+  "description": "This repository is a mirror of [phpMorphy](http://phpmorphy.sourceforge.net/)",
+  "main": "src/common.php",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antixrist/phpMorphy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antixrist/phpMorphy/issues"
+  },
+  "homepage": "https://github.com/antixrist/phpMorphy#readme"
+}
