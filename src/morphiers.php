@@ -1,6 +1,6 @@
 <?php
 
-namespace Foreword\phpMorphy;
+namespace phpMorphy;
 
  /**
  * This file is part of phpMorphy library
@@ -186,7 +186,7 @@ class phpMorphy_AnnotDecoder_Factory {
     }
     
     protected function instantinate($type) {
-        $clazz = '\Foreword\phpMorphy\phpMorphy_AnnotDecoder_' . ucfirst($GLOBALS['__phpmorphy_strtolower']($type));
+        $clazz = '\phpMorphy\phpMorphy_AnnotDecoder_' . ucfirst($GLOBALS['__phpmorphy_strtolower']($type));
         
         return new $clazz($this->eos);
     }

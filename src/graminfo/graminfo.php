@@ -1,6 +1,6 @@
 <?php
 
-namespace Foreword\phpMorphy;
+namespace phpMorphy;
 
  /**
  * This file is part of phpMorphy library
@@ -121,7 +121,7 @@ abstract class phpMorphy_GramInfo implements phpMorphy_GramInfo_Interace {
         
         $storage_type = $storage->getTypeAsString();
         $file_path = dirname(__FILE__) . "/access/graminfo_{$storage_type}.php";
-        $clazz = '\Foreword\phpMorphy\phpMorphy_GramInfo_' . ucfirst($storage_type);
+        $clazz = '\phpMorphy\phpMorphy_GramInfo_' . ucfirst($storage_type);
         
         require_once($file_path);
         return new $clazz($storage->getResource(), $header);

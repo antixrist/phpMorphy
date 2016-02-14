@@ -1,6 +1,6 @@
 <?php
 
-namespace Foreword\phpMorphy;
+namespace phpMorphy;
 
  /**
  * This file is part of phpMorphy library
@@ -206,7 +206,7 @@ class phpMorphy_Storage_Factory {
             return new phpMorphy_Storage_Proxy($type, $fileName, $this);
         }
         
-        $clazz = '\Foreword\phpMorphy\phpMorphy_Storage_' . ucfirst($GLOBALS['__phpmorphy_strtolower']($type));
+        $clazz = '\phpMorphy\phpMorphy_Storage_' . ucfirst($GLOBALS['__phpmorphy_strtolower']($type));
         
         if($type != PHPMORPHY_STORAGE_SHM) {
             return new $clazz($fileName);

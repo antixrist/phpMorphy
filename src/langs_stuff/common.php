@@ -1,6 +1,6 @@
 <?php
 
-namespace Foreword\phpMorphy;
+namespace phpMorphy;
 
 interface phpMorphy_GrammemsProvider_Interface {
     function getGrammems($partOfSpeech);

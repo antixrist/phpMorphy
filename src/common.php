@@ -1,6 +1,6 @@
 <?php
 
-namespace Foreword\phpMorphy;
+namespace phpMorphy;
 
 class Exception extends \Exception {}
 

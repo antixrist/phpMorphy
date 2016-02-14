@@ -1,6 +1,6 @@
 <?php
 
-namespace Foreword\phpMorphy;
+namespace phpMorphy;
 
 /**
  * This file is part of phpMorphy library
@@ -131,7 +131,7 @@ abstract class phpMorphy_Fsa implements phpMorphy_Fsa_Interface {
         
         $storage_type = $storage->getTypeAsString();
         $file_path = dirname(__FILE__) . "/access/fsa_{$type}_{$storage_type}.php";
-        $clazz = '\Foreword\phpMorphy\phpMorphy_Fsa_' . ucfirst($type) . '_' . ucfirst($storage_type);
+        $clazz = '\phpMorphy\phpMorphy_Fsa_' . ucfirst($type) . '_' . ucfirst($storage_type);
         
         require_once($file_path);
         return new $clazz(
